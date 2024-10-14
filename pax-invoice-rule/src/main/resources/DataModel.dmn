@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_7DC20E3E-C681-4D5F-A5F7-69E3A4315D27" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_65546441-B0C8-4F45-B6BD-C0A9E6E7BB9B" name="DataModel" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_7DC20E3E-C681-4D5F-A5F7-69E3A4315D27">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_03C051FB-E3E7-4584-9F0C-308DBFC0EB61" name="SlfeRequest" isCollection="true">
+    <dmn:typeRef>Response</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_BABDBA52-015F-44B3-B473-791D23644DFD" name="SlfeResponse" isCollection="true">
+    <dmn:typeRef>Response</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_6D77B32E-0DC9-4B3A-9862-D9BDB6705B46" name="Contextlist" isCollection="true">
+    <dmn:typeRef>context</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_75E6FB1F-F7F3-42AA-A929-25AE7F80EC25" name="StringList" isCollection="true">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_BD5FB3DD-38FF-427E-9CE4-83E334F75D88" name="GST6EList" isCollection="true">
+    <dmn:typeRef>GST6E</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_4DFA881F-5C2D-4870-AF87-D401A438C4CF" name="GSTRateList" isCollection="true">
+    <dmn:typeRef>GSTRates</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_4F7177C5-CD0C-4704-BFFC-82370BBB3B98" name="GST6E" isCollection="false">
+    <dmn:itemComponent id="_DC15A80D-A447-47BA-83DF-2BFB11CC6F6B" name="stateCode" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_74BD1EA3-A89B-4EB2-8721-CE5981F5246F" name="state" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9058F332-740E-4517-846F-53379365AD3E" name="airportCode" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E993E136-43D0-4E2C-B468-A90DC084A309" name="id" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_952EC447-DB37-4016-A429-86EBAE88D04E" name="placeOfSupply" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AAE1278B-51E1-4885-B32A-4E2EE8262749" name="e6RegisteredAddress" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_FE5F04B6-38C0-4AA1-87CF-7AECA28DE07B" name="GSTRates" isCollection="false">
+    <dmn:itemComponent id="_994DB4FF-A59E-4A0E-96ED-6676D6FB2202" name="productDescription" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2F1FA34D-EF57-494B-9A0C-51C609318406" name="igstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6A8B00CB-D72C-4005-ADC7-BF1E345DE15C" name="cgstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_A86F7164-E86D-4394-8777-74353FEE2C26" name="SlfeData" isCollection="false">
+    <dmn:itemComponent id="_19182B66-BFFD-4306-A383-6FFACAB52F55" name="ugstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E347E1FA-6D53-45AA-81B8-0231859FC103" name="transactionDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_84FE544D-285C-410B-8E03-919331BBF4F5" name="taxableComponent" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3F3C93EF-FB99-45C0-97B4-3B89337604C4" name="stateCode" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0C91CACE-A44F-4213-9925-383FD979FE8C" name="sgstugstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D2442D01-285B-47F2-9C43-67CA7EF8337E" name="sgstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5EA29E6D-EA4B-4574-9711-FD68D2FADAB9" name="serviceNo" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5130F3A1-9A7F-420C-AA94-5923A1088EF3" name="sequenceNo" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4BBFF23C-1A6F-4BBF-8F29-983BE366F472" name="sac" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F66AFC0C-9535-4B75-A8D6-9ABADAE9A107" name="pnr" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3EAB6571-948D-4814-B236-E764CEE9F2FD" name="placeOfEmbarkation" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_CAC59BE5-E1A9-4FC4-B711-C7700FD42602" name="passengerName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_37A5FF09-76C4-415E-95A2-E10D7CBF19A8" name="passengerEmail" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8553E80D-75A9-4F8C-92E0-6CBBD4589EB3" name="originalBookingDate" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8C4BBFBD-8994-431D-B25A-7CBC669D31DE" name="originCountry" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_632992F8-5D10-4ACA-BF53-56EC7D6F3943" name="nonTaxableFareComponent" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3DCE55F3-B222-40AE-BA9D-4B08DDDBF1DB" name="mailSend" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_55882BB8-B965-4DD4-BE63-4942A04A0ED1" name="localCessAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_52578950-99BD-4AB8-96CF-503B43E7E1D4" name="isProcessed" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E56B058C-38B9-4247-8437-F710F0111B86" name="isCredit" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_98295552-F5D9-4AFB-B665-CCE6D892173E" name="isAutoCorrected" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0B2B7EBD-C2AC-4C88-83FD-C899F019BDEF" name="invoiceNumber" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_CA1F9A13-F538-43A9-8BBB-1A5A304933DC" name="invOrder" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1040872C-E6B2-4704-9F5A-4C8BF2B9340B" name="igstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2C71CA52-EEAF-4089-B497-BDF5341C8A1F" name="igstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5EEA9C1A-CCF8-41ED-B42A-4652A432AE4E" name="id" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D24DA754-1C80-4070-BD05-51C28AE93F56" name="flightNumber" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AEAAD2AA-97B1-4145-A335-B5D0863C18F0" name="fileDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3E7CE4FA-5008-4EAF-AAF4-9DFA7E89413E" name="isExempted" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3CBEA1DA-A6A9-45C1-B1F1-346B8B4BC5BA" name="emailAddress" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_EEB58662-487E-4C42-AD79-146D52DFE7BE" name="e6gstin" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_60AF28FC-4B30-4905-A0E3-29846038424D" name="e6RegisteredAddress" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2F38F948-E2FD-4C06-9F3D-E99D988975BE" name="displayDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F48AB312-B23C-483F-8204-8AC2D2FD43E1" name="descriptionOfGoodsServices" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C8EB2DCC-CDE6-461D-A932-D6522123318D" name="customerName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_16255C05-2F23-45AD-B13F-76361AD07F39" name="customerGSTRegistrationState" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B30F82F4-7491-43AA-9050-4937E4EF38BC" name="customerGSTIN" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_877B28FE-115D-4967-99D0-49CF6A4B43C1" name="cgstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A52E7E49-A2DA-4DAE-A130-5974C43BC28A" name="cgstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E3E90043-EE42-4D3B-8D80-3B8F052C107B" name="cessAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D2A46F58-AB44-4949-83F0-93E22CAFA06C" name="autoCorrectionIds" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_BE3C96FD-FD12-4B43-9FCF-3F6949F97FDC" name="airportCharges" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_617459D8-5411-4BCF-A5BC-1BA433D394F8" name="dep" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_82C57F69-BC5D-4298-B475-A47CA014CA52" name="Response" isCollection="false">
+    <dmn:itemComponent id="_42447E5E-D8D0-4D8F-89A6-28B9EDE7E57F" name="sapBiErrorIds" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2762531F-F3BA-4D7B-ADC0-B76EE76CF140" name="isSapBiError" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1D511DE6-1919-45E8-970C-D9D9EED6788C" name="sapBiDescription" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_10057431-0BA5-482B-AB88-BC2535D70541" name="ugstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_FD0CED72-5090-4827-888D-CFFE04270B13" name="transactionDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_71FF7CAD-F14C-4A7F-9530-202F9BF0DFFB" name="tranType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0C516126-B62A-4D74-9A7D-3BF3ADA39488" name="taxableComponent" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A35BAEDF-23BA-4911-8D70-DFEAA46B8AAF" name="stateCode" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9E973663-5B14-4EF4-803F-1D27B138109D" name="sgstugstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E5518609-54C7-466C-8DC4-0D8872708796" name="sgstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_82B91440-CCCC-40C3-B567-7A28DC593393" name="serviceNo" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E7EA3F2C-CDFA-4257-8D6C-FF287987FCF1" name="sequenceNo" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E1E62000-1A76-4D36-A10D-1D1E05BC4954" name="sac" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C6568F74-9A68-4F66-93CD-6DC1C0539918" name="reasonIds" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_06CC7343-9C04-4598-80EB-2BD029F889E4" name="pnr" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C890E5DA-6C76-4D23-91BE-1A78124E86B0" name="placeOfEmbarkation" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DF8A4AB4-2856-4E12-AD00-7FA4AB543CF2" name="passengerName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_54A675FE-980C-4F23-A0F0-C9F3975E6CBB" name="passengerEmail" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_66765999-EDA3-4B6D-9531-514264B2727C" name="originalBookingDate" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_ED03A90E-7E6F-4569-B086-FC392A04DB0F" name="originCountry" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_85C3D59E-1153-4598-B515-B2E4F6F8C6CD" name="nonTaxableFareComponent" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_77F7FA8E-460E-4C74-AD3B-BB50987F698D" name="mailSend" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1FFD5AFE-51FC-40D5-9E5B-6E338394A261" name="localCessAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D84FD0F0-BBD0-4FBB-9854-FD028020A2F7" name="isProcessed" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1E2791BF-B300-43F3-B01C-2344B5461976" name="isCredit" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AA2DEC32-8BD5-444D-9075-0FB4174B4133" name="isAutoCorrected" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3FA319C8-701A-4EE6-8FF5-A88AF9BF728E" name="invoiceNumber" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F2A4115A-B28E-4D58-ABB6-BDF6E9F6DB02" name="invOrder" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_44AF470C-7364-4702-9397-6FFFC8453D46" name="igstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D2F24499-C4A5-4EB4-B4BD-E0D9B3466230" name="igstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_61CA706A-B6ED-439A-A98C-6C781EDE9174" name="id" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6944E119-0084-4942-B1A7-6693211D1875" name="flightNumber" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3E504D94-58B6-465B-889E-3A1E1B7C7AB6" name="fileDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F2567896-730B-49B0-AD92-7CB6BF50DFFC" name="isExempted" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_FC80F51E-82FA-4B48-BA6F-93D5A0D4ECE6" name="errorIds" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_3FBF7F45-2DD1-4A14-B04E-5A51617ED790" name="errorDescription" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1642BC13-EDED-42F2-8811-95F551EF3E85" name="isError" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_35AED4FB-C504-462A-BA29-0701BA4E7F25" name="emailAddress" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6AB45EE2-515E-4E63-834A-193B322C1C38" name="e6gstin" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1EB1DC86-1CB0-47C3-BFEF-5674AC55B72C" name="e6RegisteredAddress" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C34274F7-F0ED-40F0-B9B0-132AD64DB5BF" name="displayDate" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5A85E756-03A7-4B19-9FE3-3A0916447FA1" name="descriptionOfGoodsServices" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_504ED1AF-52DF-423E-A62D-9537526C9BD2" name="customerName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_30DBDFC5-C16E-497E-948E-2B8DFC091238" name="customerGSTRegistrationState" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_AF16AEDC-5F27-436C-A7C4-3F8A778EC9C3" name="customerGSTIN" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E39B90D7-F167-4AE5-8C35-93252B01F1C3" name="isCorrect" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9653073E-3F2B-494A-9412-31BF2359667C" name="cgstRate" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_977251E4-ED7D-4EA8-B09F-1544A1CF7FE6" name="cgstAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C332F4FA-F607-4C24-9881-60AA43981EA0" name="cessAmount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1DF652B6-5999-4C20-BFD8-FC47EB3563C3" name="autoCorrectionIds" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_33F42485-B276-4A61-B183-E05BC1984395" name="airportCharges" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_DF8AA63A-2674-4B0D-AE6E-50B81289B106" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
