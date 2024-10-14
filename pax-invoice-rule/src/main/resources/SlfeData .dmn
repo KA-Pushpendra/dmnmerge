@@ -170,11 +170,20 @@
     <dmn:knowledgeRequirement id="_084A2A8E-E603-45FE-9C6F-0A5240A252D1">
       <dmn:requiredKnowledge href="#_4304633E-A4CC-43AB-AE19-70E7C088BB65"/>
     </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_429B313C-A7EE-445F-BCA2-72B9691BA1ED">
+      <dmn:requiredKnowledge href="#_E48EFFC2-592B-4D4A-9AD1-244A974BEE86"/>
+    </dmn:knowledgeRequirement>
     <dmn:context id="_445EA6F2-B4B8-4CB6-82FC-29315EC34C36">
       <dmn:contextEntry>
         <dmn:variable id="_92CD3722-43E3-4E16-803A-08B4C42F3DC9" name="customerGSTINMaster" typeRef="dm.StringList"/>
         <dmn:literalExpression id="_A1016C5D-0E32-4A35-A019-74F9BD328C5E">
           <dmn:text>customerGSTINList()</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_28AA5410-E1BB-4EFE-8003-8703755F3545" name="subv" typeRef="number"/>
+        <dmn:literalExpression id="_039399AD-CCA6-48C0-926A-CEBAFB2F58CA">
+          <dmn:text>sub()</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
       <dmn:contextEntry>
@@ -2100,6 +2109,15 @@ SlfeData.taxableComponent &lt; 0 and (SlfeData.cgstAmount &gt; 0 or SlfeData.sgs
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_E48EFFC2-592B-4D4A-9AD1-244A974BEE86" name="sub">
+    <dmn:extensionElements/>
+    <dmn:variable id="_0D0C1115-3841-40E1-A005-C4CB53963921" name="sub" typeRef="number"/>
+    <dmn:encapsulatedLogic id="_D7784CA8-22F1-4094-BD3C-7E18483F1873" kind="FEEL">
+      <dmn:literalExpression id="_0865B76C-05EB-471D-9899-4D95C531A306">
+        <dmn:text>7-3</dmn:text>
+      </dmn:literalExpression>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_4580BEC6-090C-4716-AF75-A85EEBEA9CCE" name="DRG">
       <di:extension>
@@ -2110,6 +2128,9 @@ SlfeData.taxableComponent &lt; 0 and (SlfeData.cgstAmount &gt; 0 or SlfeData.sgs
             <kie:width>1172</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A1016C5D-0E32-4A35-A019-74F9BD328C5E">
+            <kie:width>1172</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_039399AD-CCA6-48C0-926A-CEBAFB2F58CA">
             <kie:width>1172</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_55F953D4-82D7-4A58-8B6F-0E1CF9FD6E83">
@@ -2881,6 +2902,13 @@ SlfeData.taxableComponent &lt; 0 and (SlfeData.cgstAmount &gt; 0 or SlfeData.sgs
             <kie:width>50</kie:width>
             <kie:width>760</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0865B76C-05EB-471D-9899-4D95C531A306">
+            <kie:width>150</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D7784CA8-22F1-4094-BD3C-7E18483F1873">
+            <kie:width>50</kie:width>
+            <kie:width>150</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-drg-_C95BAD4E-6900-4602-95FE-84DB6133901A" dmnElementRef="_C95BAD4E-6900-4602-95FE-84DB6133901A" isCollapsed="false">
@@ -3081,6 +3109,15 @@ SlfeData.taxableComponent &lt; 0 and (SlfeData.cgstAmount &gt; 0 or SlfeData.sgs
         <dc:Bounds x="972" y="407.13611697316855" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_E48EFFC2-592B-4D4A-9AD1-244A974BEE86" dmnElementRef="_E48EFFC2-592B-4D4A-9AD1-244A974BEE86" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="73.5981308411215" y="240.34210526315792" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_B2389129-EAB5-4275-88EA-70A89B6B8304" dmnElementRef="_B2389129-EAB5-4275-88EA-70A89B6B8304">
         <di:waypoint x="336.29906542056074" y="503"/>
         <di:waypoint x="333" y="310"/>
@@ -3100,6 +3137,10 @@ SlfeData.taxableComponent &lt; 0 and (SlfeData.cgstAmount &gt; 0 or SlfeData.sgs
       <dmndi:DMNEdge id="dmnedge-drg-_084A2A8E-E603-45FE-9C6F-0A5240A252D1" dmnElementRef="_084A2A8E-E603-45FE-9C6F-0A5240A252D1">
         <di:waypoint x="539.5981308411215" y="487.3421052631579"/>
         <di:waypoint x="333" y="310"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_429B313C-A7EE-445F-BCA2-72B9691BA1ED" dmnElementRef="_429B313C-A7EE-445F-BCA2-72B9691BA1ED">
+        <di:waypoint x="123.5981308411215" y="265.3421052631579"/>
+        <di:waypoint x="283" y="285"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_E528D08C-18AD-4B2F-968B-A04CD9BBC4A8" dmnElementRef="_E528D08C-18AD-4B2F-968B-A04CD9BBC4A8">
         <di:waypoint x="1171" y="340.3421052631579"/>
